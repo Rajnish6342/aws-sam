@@ -21,7 +21,7 @@ Resources:
   add:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: src/handlers/add.add
+      Handler: src/handlers/randomNo.randomNo
       Description: Add Lambda Function      
 Outputs:
   WebEndpoint:
