@@ -13,3 +13,9 @@
 * It will generate codepipeline.yaml for multi stages
 * run this command to create pipeline and stack `sam deploy -t codepipeline.yaml --stack-name randomno-preprod --capabilities=CAPABILITY_IAM`
 * Opinion Keep pipeline on your hand make changes in template and create a pipeline using codebuild and pipeline stages simple and clean.
+
+**SAM DELETE**
+
+* Use sam delete for deleting a stack created using sam
+* you can speicify a stage by using  `--config-env` option
+* Ex: `sam delete --config-env preprod`
