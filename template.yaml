@@ -12,10 +12,6 @@ Globals:
       - x86_64
     MemorySize: 128
     Timeout: 60
-Parameters:
-  Stage:
-    Type: String
-    Default: uat
 
 Resources:
   add:
@@ -23,7 +19,3 @@ Resources:
     Properties:
       Handler: src/handlers/randomNo.randomNo
       Description: Add Lambda Function      
-Outputs:
-  WebEndpoint:
-    Description: API Gateway endpoint URL for ${Stage} stage
-    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/${Stage}/"
