@@ -1,21 +1,21 @@
-AWSTemplateFormatVersion: 2010-09-09
-Description: >-
-  sam-random-no
+AWSTemplateFormatVersion: '2010-09-09'
+Description: sam-random-no
 Transform:
 - AWS::Serverless-2016-10-31
-
 Globals:
   Function:
     Tracing: Active
     Runtime: nodejs20.x
     Architectures:
-      - x86_64
+    - x86_64
     MemorySize: 128
     Timeout: 60
-
 Resources:
   randomNo:
     Type: AWS::Serverless::Function
     Properties:
       Handler: src/handlers/randomNo.randomNo
-      Description: Add Lambda Function      
+      Description: Add Lambda Function
+      CodeUri: s3://rajnish-demo-learning/d50dadfbc5158caab64e946d20b261d6
+    Metadata:
+      SamResourceId: randomNo
